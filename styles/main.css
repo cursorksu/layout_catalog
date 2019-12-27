@@ -189,6 +189,7 @@ li {
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
+    margin: 0;
     margin-bottom: 5px; }
   .card__reviews {
     display: -webkit-box;
