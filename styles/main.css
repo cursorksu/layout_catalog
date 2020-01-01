@@ -172,9 +172,6 @@ li {
     padding: 0 20px; } }
 
 .card {
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
-  margin: 0 24px 50px;
   width: 200px;
   padding: 14px;
   background: #fff;
@@ -233,7 +230,7 @@ li {
   -webkit-transition: border 0.2s  ease-in-out, color 0.2s ease-in-out;
   transition: border 0.2s  ease-in-out, color 0.2s ease-in-out; }
 
-.btn:hover {
+.card:hover .btn {
   background: #fff;
   border: 1px solid #00acdc;
   color: #00acdc; }
@@ -271,7 +268,7 @@ li {
       -ms-flex-align: end;
           align-items: flex-end;
   line-height: 14px;
-  margin-bottom: 21px; }
+  margin-bottom: 20px; }
   .price__value {
     font-weight: bold;
     font-size: 16px;
@@ -283,19 +280,23 @@ li {
   font-family: "Roboto", sans-serif; }
 
 .catalog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  grid-gap: 51px 48px;
   max-width: 1024px;
   padding: 0 16px;
   margin: 0 auto; }
+  @media (max-width: 1023px) {
+    .catalog {
+      grid-template-columns: repeat(3, 200px); } }
+  @media (max-width: 768px) {
+    .catalog {
+      grid-template-columns: repeat(2, 200px); } }
+  @media (max-width: 450px) {
+    .catalog {
+      grid-template-columns: 200px; } }
 
 /*# sourceMappingURL=main.css.map */
